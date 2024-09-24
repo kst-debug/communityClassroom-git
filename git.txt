@@ -1,0 +1,188 @@
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop
+$ ls
+'Blender 4.1.lnk'*                                  desktop.ini
+ CapCut.lnk*                                        ffll.txt
+ CodeBlocks.lnk*                                    graphics.cpp
+ Discord.lnk*                                      'mini project'/
+'Eclipse IDE for Java De0velopers - 2023-09.lnk'*   p1.exe*
+ Notion.lnk*                                        p1.o
+ RULEBOOKS/                                         project/
+'SMART INDIA HACKATHON 2024 (2)[1].pptx'            reservation.dat
+'Wondershare Filmora 13.lnk'*
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop
+$ cd project
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ ls
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ ls -a
+./  ../  .git/
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ ls .git
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ touch names.txt
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git add names.txt
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   names.txt
+
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git commit -m "names.txt file added "
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'kshit@kshitij15.(none)')
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   names.txt
+
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git config --global user.email "kshitijthorat_comp@jspmrscoe.edu.in"
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ ^[[200~ git config --global user.name "kshitij"
+bash: $'\E[200~': command not found
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$  git config --global user.name "kshitij"
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git commit -m "names.txt file added "
+[master (root-commit) 8078038] names.txt file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ cat names.txt
+yash patil
+kshitij thorat
+developers
+
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git add .
+warning: in the working copy of 'names.txt', LF will be replaced by CRLF the next time Git touches it
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git restore names.txt
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git restore --staged names.txt
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git add .
+warning: in the working copy of 'names.txt', LF will be replaced by CRLF the next time Git touches it
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git commit -m "names.txt file modified "
+[master f364c1a] names.txt file modified
+ 1 file changed, 4 insertions(+)
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$ git log
+commit f364c1a4673f92b3ea1546efc4f97f2e04545473 (HEAD -> master)
+Author: kshitij <kshitijthorat_comp@jspmrscoe.edu.in>
+Date:   Tue Sep 24 00:42:18 2024 +0530
+
+    names.txt file modified
+
+commit 80780382926735eeb0050bfc07c060898e69c81f
+Author: kshitij <kshitijthorat_comp@jspmrscoe.edu.in>
+Date:   Tue Sep 24 00:15:03 2024 +0530
+
+    names.txt file added
+
+kshit@kshitij15 MINGW64 ~/OneDrive/Desktop/project (master)
+$
